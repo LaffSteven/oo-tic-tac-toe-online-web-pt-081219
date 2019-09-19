@@ -42,10 +42,14 @@ class TicTacToe
   
   def turn_count
     num_turns = 0
+    indexer = 0
     @board.each do
-      if !position_taken(num_turns)
-        num_turns +=1
+      if !position_taken(indexer)
+        num_turns += 1
       end
+      indexer += 1
     end
+    num_turns
+  end
 
 end
