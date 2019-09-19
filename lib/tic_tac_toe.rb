@@ -41,15 +41,11 @@ class TicTacToe
   end
   
   def turn_count
-    num_turns = 0
-    indexer = 0
-    @board.each do
-      if position_taken(indexer)
-        num_turns += 1
-      end
-      indexer += 1
+    number_of_turns = 0
+    @board.each do |space|
+    if space == "X" || space == "O"
+        number_of_turns += 1
     end
-    num_turns
   end
 
 end
